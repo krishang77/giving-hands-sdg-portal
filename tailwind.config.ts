@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,44 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Custom colors for our SDG elderly care theme
+                sage: {
+                    50: '#f8faf8',
+                    100: '#e8f0e8',
+                    200: '#d1e0d2',
+                    300: '#adc5af',
+                    400: '#85a588',
+                    500: '#5e7f61',
+                    600: '#4a664c',
+                    700: '#3e513f',
+                    800: '#344136',
+                    900: '#2c372e',
+                },
+                peach: {
+                    50: '#fff8f5',
+                    100: '#fff0e9',
+                    200: '#fddbc9',
+                    300: '#fbbda0',
+                    400: '#f8966a',
+                    500: '#f57746',
+                    600: '#e15a27',
+                    700: '#bc4820',
+                    800: '#963a1e',
+                    900: '#7c321d',
+                },
+                sky: {
+                    50: '#f4f9fd',
+                    100: '#e8f3fa',
+                    200: '#c7e3f4',
+                    300: '#94caea',
+                    400: '#5baada',
+                    500: '#3890c8',
+                    600: '#2777ab',
+                    700: '#205f8b',
+                    800: '#1e4f72',
+                    900: '#1c435f',
+                },
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +122,48 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'fade-in': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateY(10px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateY(0)'
+                    }
+                },
+                'gentle-pulse': {
+                    '0%, 100%': {
+                        opacity: '1',
+                        transform: 'scale(1)'
+                    },
+                    '50%': {
+                        opacity: '0.95',
+                        transform: 'scale(1.05)'
+                    }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'fade-in': 'fade-in 0.5s ease-out forwards',
+                'gentle-pulse': 'gentle-pulse 3s ease-in-out infinite'
+			},
+            typography: {
+                DEFAULT: {
+                    css: {
+                        maxWidth: '65ch',
+                        color: 'var(--foreground)',
+                        a: {
+                            color: 'var(--primary)',
+                            '&:hover': {
+                                color: 'var(--primary-foreground)',
+                            },
+                        },
+                    },
+                },
+            },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
