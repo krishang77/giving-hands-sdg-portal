@@ -170,7 +170,7 @@ const VolunteerOpportunities = () => {
                     <SelectValue placeholder="All Categories" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Categories</SelectItem>
+                    <SelectItem value="all-categories">All Categories</SelectItem>
                     <SelectItem value="Social Support">Social Support</SelectItem>
                     <SelectItem value="Education">Education</SelectItem>
                     <SelectItem value="Practical Support">Practical Support</SelectItem>
@@ -189,7 +189,7 @@ const VolunteerOpportunities = () => {
                     <SelectValue placeholder="All Types" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Types</SelectItem>
+                    <SelectItem value="all-types">All Types</SelectItem>
                     <SelectItem value="in-person">In-Person</SelectItem>
                     <SelectItem value="remote">Remote</SelectItem>
                   </SelectContent>
