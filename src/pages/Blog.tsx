@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BlogHero from '../components/blog/BlogHero';
 import BlogPosts from '../components/blog/BlogPosts';
+import NewsSection from '../components/blog/NewsSection';
 import ResourcesSection from '../components/blog/ResourcesSection';
 
 const Blog = () => {
@@ -13,6 +14,7 @@ const Blog = () => {
       <main className="flex-grow">
         <BlogHero />
         <BlogPosts />
+        <NewsSection />
         <ResourcesSection />
       </main>
       <Footer />
